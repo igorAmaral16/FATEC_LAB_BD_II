@@ -45,20 +45,26 @@
 	  padding: 8px;
 	}
 	
-	td {
-	  background-color: #fff;
-	  border: 1px solid #ddd;
-	  padding: 8px;
-	}
-	
-	tr:nth-child(even) td {
-	  background-color: #f2f2f2;
-	}
-	
 	.wrapper {
 	  display: flex;
 	  flex-wrap: wrap;
 	  justify-content: center;
+	}
+	
+	.grupo-a {
+		background-color: #ff6961;
+	}
+	
+	.grupo-b {
+		background-color: #0074d9;
+	}
+	
+	.grupo-c {
+		background-color: #2ecc40;
+	}
+	
+	.grupo-d {
+		background-color: #b10dc9;
 	}
 
 </style>
@@ -93,7 +99,7 @@
 	
 	<div>
 	<c:if test="${not empty grupoA}">
-		<table border="1">
+		<table class = "grupo-a" border="1">
 			<thead>
 				<tr>
 					<th>Nome do Time</th>
@@ -115,7 +121,7 @@
 <div>
 	<c:choose>
 		<c:when test="${not empty grupoB}">
-			<table border="1">
+			<table class = "grupo-b" border="1">
 				<thead>
 					<tr>
 						<th>Nome do Time</th>
@@ -139,7 +145,7 @@
 <div>
 	<c:choose>
 		<c:when test="${not empty grupoC}">
-			<table border="1">
+			<table class = "grupo-c" border="1">
 				<thead>
 					<tr>
 						<th>Nome do Time</th>
@@ -163,7 +169,7 @@
 <div>
 	<c:choose>
 		<c:when test="${not empty grupoD}">
-			<table border="1">
+			<table  border="1">
 				<thead>
 					<tr>
 						<th>Nome do Time</th>
@@ -172,7 +178,7 @@
 				</thead>
 				<tbody>
 					<c:forEach items="${grupoD}" var="gd">
-						<tr align="center">
+						<tr class = "grupo-d" align="center">
 							<td><c:out value="${gd.nometime}"></c:out></td>
 							<td><c:out value="${gd.grupo}"></c:out></td>
 						</tr>
