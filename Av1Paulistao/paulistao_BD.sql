@@ -191,7 +191,7 @@ AS
 
 		SET @cont = @cont + 1
 
-		EXEC sp_jogos @vetor_grupos
+		EXEC sp_criaJogos @vetor_grupos
 	END
 
 	WHILE @id <= 96

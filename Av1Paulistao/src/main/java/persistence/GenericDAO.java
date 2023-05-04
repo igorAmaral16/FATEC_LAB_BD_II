@@ -16,7 +16,7 @@ public class GenericDAO {
 		String senha = "123456";
 		Class.forName("net.sourceforge.jtds.jdbc.Driver");
 		con = DriverManager.getConnection(String.format(
-				"jdbc:jtds:sqlserver://%s:1433;databaseName=%s;user=%s;password=%s;", hostName, dbName, user, senha));
+				"jdbc:jtds:sqlserver://%s:57126;databaseName=%s;user=%s;password=%s;", hostName, dbName, user, senha));
 
 		return con;
 	}
