@@ -22,17 +22,23 @@ pageEncoding="ISO-8859-1"%>
 	 <br />
 	 <br />
 	 <br />
+	 <br />
+	 <br />
 	 <div id="titulo" align = "center">
-	 	<h2> PAULISTÃO 2023</h2>
+	 	<h1> PAULISTÃO 2023</h1>
 	 </div>
 	 <br />
 	 <br />
 	 <br />
-	 <div>
+	 <div id="menuS">
 	 	<ul>
-	 		<li><a href="inserirGols"> Inserir Gols </a></li>
-	 		<li><a href="buscarGrupos"> Buscar Grupos </a></li>
-	 		
+	 		<table>
+		 		<td>
+			 		<h3><a href="inserirGols"> Inserir Gols </a></h3>
+			 		<h3><a href="buscarGrupos"> Buscar Grupos </a></h3>
+			 		<h3><a href="classificacaoGeral"> Classificação Geral </a></h3>
+		 		</td>
+	 		</table>
 	 	</ul>
 	 </div>
   </body>

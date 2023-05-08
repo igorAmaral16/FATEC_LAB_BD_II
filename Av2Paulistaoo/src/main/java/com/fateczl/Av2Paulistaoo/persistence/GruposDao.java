@@ -184,4 +184,37 @@ public class GruposDao implements IGruposDao{
 		
 		return gp;
 	}
+	
+	@Override
+	public List<GrupoMostrar> listarClassificacao(String grupo) throws SQLException, ClassNotFoundException {
+		List<GrupoMostrar> gp = new ArrayList<>();
+		Connection con = gDao.getConnection();
+		
+		String sql = "SELECT nome_time, num_jogos_disputados, vitorias, empates, derrotas, gols_marcados, gols_sofridos, saldo_gols, pontos FROM dbo.fn_classificacaoGeral(?)";
+		PreparedStatement ps = con.prepareStatement(sql);	
+		ps.setString(1, grupo);
+
+		ResultSet rs = ps.executeQuery();
+
+		while (rs.next()) {
+			GrupoMostrar grupoMostrar = new GrupoMostrar();
+			
+			grupoMostrar.setNomeTime(rs.getString("nome_time"));
+			grupoMostrar.setJogosDisputados(rs.getInt("num_jogos_disputados"));
+			grupoMostrar.setVitorias(rs.getInt("vitorias"));
+			grupoMostrar.setEmpates(rs.getInt("empates"));
+			grupoMostrar.setDerrotas(rs.getInt("derrotas"));
+			grupoMostrar.setGolsMarcados(rs.getInt("gols_marcados"));
+			grupoMostrar.setGolsSofridos(rs.getInt("gols_sofridos"));
+			grupoMostrar.setSaldoGols(rs.getInt("saldo_gols"));
+			grupoMostrar.setPontos(rs.getInt("pontos"));
+			
+			gp.add(grupoMostrar);
+		}
+		rs.close();
+		ps.close();
+		con.close();
+		
+		return gp;
+	}
 }

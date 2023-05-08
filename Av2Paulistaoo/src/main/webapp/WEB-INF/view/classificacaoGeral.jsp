@@ -6,7 +6,7 @@ pageEncoding="ISO-8859-1"%>
 <html>
 	<head>
 		<meta charset="ISO-8859-1">
-		<title>Tabela de grupos</title>
+		<title>Tabela de times</title>
 		<link rel="stylesheet" type="text/css" href='<c:url value="./resources/css/style.css"/>'>
 	</head>
 <body>
@@ -14,7 +14,7 @@ pageEncoding="ISO-8859-1"%>
 		<li><a href="index">VOLTAR</a></li>
 	</ul>
      <div>
-         	 <form action="buscarGrupos" method="post">
+         	 <form action="buscarTimes" method="post">
                	<table>
                  <tr>
                  	<th>Grupo</th>
@@ -72,7 +72,7 @@ pageEncoding="ISO-8859-1"%>
 	</c:when>
 		<c:otherwise>
 			<div>
-	              <h1>Não tem grupos registrados</h1>
+	              <h1>Não tem times registrados</h1>
 			</div>
 		</c:otherwise>		
 		 </c:choose>		

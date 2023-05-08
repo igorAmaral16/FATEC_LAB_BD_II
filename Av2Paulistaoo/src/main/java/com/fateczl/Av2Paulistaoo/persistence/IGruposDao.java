@@ -13,5 +13,6 @@ public interface IGruposDao {
 	public List<Grupo> listarGrupoC() throws SQLException, ClassNotFoundException;
 	public List<Grupo> listarGrupoD() throws SQLException, ClassNotFoundException;
 	public List<GrupoMostrar> listarGrupos(String grupo) throws SQLException, ClassNotFoundException;
+	public List<GrupoMostrar> listarClassificacao(String grupo) throws SQLException, ClassNotFoundException;
 
 }
