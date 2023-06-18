@@ -47,6 +47,8 @@ public class InsereNotasController {
 		nota.setNota(Double.parseDouble(allParam.get("nota")));
 		nota.setTipoAvaliacao(Integer.valueOf(allParam.get("tipoAvaliacao")));
 		
+		System.out.println(nota);
+		
 		try {
 			if(botao.equalsIgnoreCase("Inserir")) {
 				System.out.println("Entrou pra inserir");

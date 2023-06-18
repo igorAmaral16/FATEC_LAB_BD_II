@@ -397,11 +397,11 @@ INSERT INTO notas (codigo_avaliacao, codigo_disciplina, nota, ra_aluno)
 VALUES(6, 4213013, 5.0, 2)
 
 -- Apresentar em tela, uma UDF com a saída das faltas
-
 CREATE FUNCTION fn_verificaFaltas(@presenca INT) 
 RETURNS VARCHAR(4) 
 AS BEGIN
 DECLARE @retorno VARCHAR(4)
+
 			IF(@presenca =0) BEGIN
 					SET @retorno = 'PPPP'
 				END
@@ -419,7 +419,7 @@ DECLARE @retorno VARCHAR(4)
 				END
 RETURN @retorno
 END
-
+GO
 CREATE FUNCTION fn_verificaContador(@presenca INT, @contador INT) RETURNS INT AS BEGIN
 DECLARE @retorno INT
 			IF(@presenca = '0') BEGIN
